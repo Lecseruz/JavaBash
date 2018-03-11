@@ -1,0 +1,49 @@
+package ru.magomed.command.impl;
+
+import ru.magomed.Directory;
+import ru.magomed.command.api.Command;
+import ru.magomed.common.Config;
+import ru.magomed.exception.DoNotDirectoryException;
+import ru.magomed.common.Messages;
+import ru.magomed.common.PathResolve;
+import ru.magomed.exception.NotFoundException;
+
+import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.Path;
+
+public class CommandCD implements Command {
+
+    private String directory;
+
+    public CommandCD(String directory) {
+        this.directory = directory;
+    }
+
+    @Override
+    public boolean execute() {
+        Path currPath = PathResolve.cdPath(Directory.getInstance().getPath(), directory);
+        try {
+            if (!Files.isDirectory(currPath)) {
+                throw new DoNotDirectoryException();
+            }
+            if (Files.notExists(currPath)) {
+                throw new NotFoundException();
+            }
+            Directory.getInstance().setPath(currPath.toString());
+            return true;
+        }catch (NotFoundException e){
+            System.out.println(Config.CD + Messages.NOT_FOUND);
+            return false;
+        }
+        catch (DoNotDirectoryException e){
+            System.out.println(Config.CD + Messages.NOT_A_DIRECTORY + currPath.getFileName());
+            return false;
+        }
+    }
+
+    @Override
+    public boolean isRequiredSuccess() {
+        return false;
+    }
+}

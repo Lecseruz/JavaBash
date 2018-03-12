@@ -3,6 +3,8 @@ package ru.magomed.command.impl;
 import ru.magomed.command.api.Command;
 
 public class EmptyCommand implements Command{
+    private boolean flag = false;
+
     @Override
     public boolean execute() {
         return false;
@@ -10,6 +12,11 @@ public class EmptyCommand implements Command{
 
     @Override
     public boolean isRequiredSuccess() {
-        return false;
+        return flag;
+    }
+
+    @Override
+    public void setRequiredSuccess(boolean flag) {
+        this.flag = flag;
     }
 }

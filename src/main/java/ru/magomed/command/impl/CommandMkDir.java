@@ -2,7 +2,8 @@ package ru.magomed.command.impl;
 
 import ru.magomed.Directory;
 import ru.magomed.command.api.Command;
-import ru.magomed.common.Config;
+import ru.magomed.common.NamesCommands;
+import ru.magomed.common.Options;
 import ru.magomed.common.Messages;
 import ru.magomed.common.PathResolve;
 import ru.magomed.exception.AlreadyExistException;
@@ -12,6 +13,8 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 
 public class CommandMkDir implements Command {
+
+    private boolean flag = false;
 
     private Path path;
 
@@ -28,7 +31,7 @@ public class CommandMkDir implements Command {
             Files.createDirectories(path);
             return true;
         } catch (AlreadyExistException e) {
-            System.out.println(Config.MKDIR + Messages.EXIST + path.getFileName());
+            System.out.println(NamesCommands.MKDIR + Messages.EXIST + path.getFileName());
             return false;
         } catch (IOException e) {
             //fail to create directory
@@ -39,6 +42,11 @@ public class CommandMkDir implements Command {
 
     @Override
     public boolean isRequiredSuccess() {
-        return false;
+        return flag;
+    }
+
+    @Override
+    public void setRequiredSuccess(boolean flag) {
+        this.flag = flag;
     }
 }

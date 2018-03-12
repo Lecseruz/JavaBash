@@ -4,6 +4,7 @@ import ru.magomed.Directory;
 import ru.magomed.command.api.Command;
 
 public class CommandPWD implements Command {
+    private boolean flag = false;
 
     @Override
     public boolean execute() {
@@ -13,6 +14,11 @@ public class CommandPWD implements Command {
 
     @Override
     public boolean isRequiredSuccess() {
-        return false;
+        return flag;
+    }
+
+    @Override
+    public void setRequiredSuccess(boolean flag) {
+        this.flag = flag;
     }
 }

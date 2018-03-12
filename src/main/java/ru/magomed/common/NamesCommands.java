@@ -1,16 +1,6 @@
 package ru.magomed.common;
 
-import java.nio.file.CopyOption;
-import java.nio.file.StandardCopyOption;
-
-public class Config {
-
-    public static final int MIN_LINES_FILE = 10;
-
-    public static final CopyOption[] OPTIONS = new CopyOption[]{
-            StandardCopyOption.REPLACE_EXISTING,
-            StandardCopyOption.COPY_ATTRIBUTES
-    };
+public class NamesCommands {
 
     public static final String MKDIR = "mkdir";
 
@@ -32,5 +22,5 @@ public class Config {
 
     public static final String TOUCH = "touch";
 
-
+    public static final String SIGN = "sign";
 }

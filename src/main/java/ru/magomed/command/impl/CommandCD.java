@@ -2,18 +2,19 @@ package ru.magomed.command.impl;
 
 import ru.magomed.Directory;
 import ru.magomed.command.api.Command;
-import ru.magomed.common.Config;
+import ru.magomed.common.NamesCommands;
+import ru.magomed.common.Options;
 import ru.magomed.exception.DoNotDirectoryException;
 import ru.magomed.common.Messages;
 import ru.magomed.common.PathResolve;
 import ru.magomed.exception.NotFoundException;
 
-import java.io.File;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
 public class CommandCD implements Command {
 
+    private boolean flag = true;
     private String directory;
 
     public CommandCD(String directory) {
@@ -33,17 +34,22 @@ public class CommandCD implements Command {
             Directory.getInstance().setPath(currPath.toString());
             return true;
         }catch (NotFoundException e){
-            System.out.println(Config.CD + Messages.NOT_FOUND);
+            System.out.println(NamesCommands.CD + Messages.NOT_FOUND);
             return false;
         }
         catch (DoNotDirectoryException e){
-            System.out.println(Config.CD + Messages.NOT_A_DIRECTORY + currPath.getFileName());
+            System.out.println(NamesCommands.CD + Messages.NOT_A_DIRECTORY + currPath.getFileName());
             return false;
         }
     }
 
     @Override
     public boolean isRequiredSuccess() {
-        return false;
+        return flag;
+    }
+
+    @Override
+    public void setRequiredSuccess(boolean flag) {
+        this.flag = flag;
     }
 }

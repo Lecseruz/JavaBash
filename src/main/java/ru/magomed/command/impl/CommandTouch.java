@@ -2,6 +2,7 @@ package ru.magomed.command.impl;
 
 import ru.magomed.Directory;
 import ru.magomed.command.api.Command;
+import ru.magomed.common.PathResolve;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -13,18 +14,23 @@ import java.util.concurrent.TimeUnit;
 
 public class CommandTouch implements Command {
 
-    private String name;
+    private boolean flag = false;
 
-    public CommandTouch(String name) {
-        this.name = name;
-    }
+    private Path file;
+
+    public CommandTouch(String path) {
+        Path file = Paths.get(path);
+        this.file = Paths.get(
+                PathResolve.cdPath(
+                        Directory.getInstance().getPath(),
+                        file.getParent().toString()).toString(),
+                file.getFileName().toString());    }
 
     @Override
     public boolean execute() {
-        Path newFilePath = Paths.get(Directory.getInstance().getPath(), name);
-        if (!Files.exists(newFilePath)) {
+        if (!Files.exists(file)) {
             try {
-                Files.createFile(newFilePath);
+                Files.createFile(file);
                 return true;
             } catch (IOException e) {
                 e.printStackTrace();
@@ -32,9 +38,9 @@ public class CommandTouch implements Command {
             }
         } else {
             try {
-                Files.setLastModifiedTime(newFilePath, FileTime.from(LocalDateTime.now().getSecond(), TimeUnit.SECONDS));
+                Files.setLastModifiedTime(file, FileTime.from(LocalDateTime.now().getSecond(), TimeUnit.SECONDS));
                 return true;
-            }catch (IOException e) {
+            } catch (IOException e) {
                 e.printStackTrace();
                 return false;
             }
@@ -43,6 +49,11 @@ public class CommandTouch implements Command {
 
     @Override
     public boolean isRequiredSuccess() {
-        return false;
+        return flag;
+    }
+
+    @Override
+    public void setRequiredSuccess(boolean flag) {
+        this.flag = flag;
     }
 }

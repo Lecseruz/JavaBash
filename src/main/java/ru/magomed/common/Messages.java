@@ -16,9 +16,9 @@ public class Messages {
             "\t- cp <file/directory name> - копирование файла или директории. Опционально - с возможностью указания флага рекурсивного копирования.\n" +
             "\t- exit - завершение работы эмулятора.\n";
 
-    public static final String NOT_FOUND = " Does not exist ";
+    public static final String NOT_FOUND = " does not exist ";
 
-    public static final String EXIST = " Directory already exist ";
+    public static final String EXIST = " directory already exist ";
 
     public static final String NOT_A_DIRECTORY = " Not a directory ";
 

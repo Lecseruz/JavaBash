@@ -1,14 +1,9 @@
 package ru.magomed.command.impl;
 
-import ru.magomed.Directory;
 import ru.magomed.command.api.Command;
-import ru.magomed.common.Config;
-import ru.magomed.common.FolderUtils;
-import ru.magomed.common.Messages;
-import ru.magomed.common.PathResolve;
+import ru.magomed.common.*;
 import ru.magomed.exception.NotFoundException;
 
-import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -16,6 +11,8 @@ import java.nio.file.Paths;
 
 public class CommandCP implements Command {
 
+
+    boolean flag = false;
     /**
      * Путь откуда копировать
      */
@@ -31,24 +28,20 @@ public class CommandCP implements Command {
         this.to = Paths.get(targetPath);
     }
 
-    public CommandCP(String srcPath) {
-        this.from = Paths.get(srcPath);
-        this.to = PathResolve.cdPath(Directory.getInstance().getPath(), Paths.get(srcPath).getFileName().toString());
-    }
-
     @Override
     public boolean execute() {
         try {
             if (Files.exists(from) && Files.exists(to)) {
                 throw new NotFoundException();
             }
-            Files.copy(from, to, Config.OPTIONS);
-            if (Files.isDirectory(from)) {
-                FolderUtils.copyFolder(new File(from.toString()), new File(to.toString()));
-            }
+            Files.copy(from, to, Options.OPTIONS);
+//            if (Files.isDirectory(from)) {
+//                FolderUtils.copyFolder(new File(from.toString()), new File(to.toString()));
+//            }
+            Files.walkFileTree(from, new CopyDirVisitor(from, to, Options.OPTIONS));
             return true;
         } catch (NotFoundException e) {
-            System.out.println(Config.CP + Messages.NOT_FOUND);
+            System.out.println(NamesCommands.CP + Messages.NOT_FOUND);
             return false;
         } catch (IOException e) {
             e.printStackTrace();
@@ -58,6 +51,11 @@ public class CommandCP implements Command {
 
     @Override
     public boolean isRequiredSuccess() {
-        return false;
+        return flag;
+    }
+
+    @Override
+    public void setRequiredSuccess(boolean flag) {
+        this.flag = flag;
     }
 }

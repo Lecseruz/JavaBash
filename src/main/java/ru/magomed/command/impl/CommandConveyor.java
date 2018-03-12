@@ -9,14 +9,17 @@ public class CommandConveyor implements Command {
 
     private Queue<Command> queue = new LinkedList<>();
 
-    private boolean flag = true;
-
     @Override
     public boolean execute() {
         boolean success = true;
         while (!queue.isEmpty()) {
-            if (!queue.poll().execute()) {
+            if (!queue.peek().execute()) {
                 success = false;
+                if (queue.poll().isRequiredSuccess()) {
+                    break;
+                }
+            } else {
+                queue.poll();
             }
         }
         return success;
@@ -24,16 +27,20 @@ public class CommandConveyor implements Command {
 
     @Override
     public boolean isRequiredSuccess() {
-        return false;
+        return true;
+    }
+
+    @Override
+    public void setRequiredSuccess(boolean flag) {
+        ;
     }
 
     public void add(Command command) {
-        if (flag) {
-            queue.add(command);
-        }
+        queue.add(command);
     }
 
-    public void setFlag(boolean flag) {
-        this.flag = flag;
+    public enum Delimiter {
+        AMP,
+        DSLASH
     }
 }

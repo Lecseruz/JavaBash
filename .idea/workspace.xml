@@ -2,16 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b28a7d3d-4e67-4b03-9d37-77900a0a0f80" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ru/magomed/common/FolderUtils.java" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/README.MD" afterPath="$PROJECT_DIR$/README.MD" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/magomed/command/impl/CommandCD.java" afterPath="$PROJECT_DIR$/src/main/java/ru/magomed/command/impl/CommandCD.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/magomed/command/impl/CommandCP.java" afterPath="$PROJECT_DIR$/src/main/java/ru/magomed/command/impl/CommandCP.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/magomed/command/impl/CommandConveyor.java" afterPath="$PROJECT_DIR$/src/main/java/ru/magomed/command/impl/CommandConveyor.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/magomed/command/impl/CommandMkDir.java" afterPath="$PROJECT_DIR$/src/main/java/ru/magomed/command/impl/CommandMkDir.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/magomed/command/impl/CommandParser.java" afterPath="$PROJECT_DIR$/src/main/java/ru/magomed/command/impl/CommandParser.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/magomed/exception/AlreadyExistException.java" afterPath="$PROJECT_DIR$/src/main/java/ru/magomed/exception/DirectoryAlreadyExistException.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/magomed/exception/DoNotDirectoryException.java" afterPath="$PROJECT_DIR$/src/main/java/ru/magomed/exception/NotDirectoryException.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/magomed/command/impl/CommandCat.java" afterPath="$PROJECT_DIR$/src/main/java/ru/magomed/command/impl/CommandCat.java" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/magomed/Main.class" afterPath="$PROJECT_DIR$/target/classes/ru/magomed/Main.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/magomed/command/impl/CommandCD.class" afterPath="$PROJECT_DIR$/target/classes/ru/magomed/command/impl/CommandCD.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/magomed/command/impl/CommandCP.class" afterPath="$PROJECT_DIR$/target/classes/ru/magomed/command/impl/CommandCP.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/magomed/command/impl/CommandCat.class" afterPath="$PROJECT_DIR$/target/classes/ru/magomed/command/impl/CommandCat.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/magomed/command/impl/CommandLS.class" afterPath="$PROJECT_DIR$/target/classes/ru/magomed/command/impl/CommandLS.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/magomed/command/impl/CommandMkDir.class" afterPath="$PROJECT_DIR$/target/classes/ru/magomed/command/impl/CommandMkDir.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/magomed/command/impl/CommandParser.class" afterPath="$PROJECT_DIR$/target/classes/ru/magomed/command/impl/CommandParser.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/magomed/command/impl/CommandTail.class" afterPath="$PROJECT_DIR$/target/classes/ru/magomed/command/impl/CommandTail.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/magomed/command/impl/CommandTouch.class" afterPath="$PROJECT_DIR$/target/classes/ru/magomed/command/impl/CommandTouch.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/magomed/common/CopyDirVisitor.class" afterPath="$PROJECT_DIR$/target/classes/ru/magomed/common/CopyDirVisitor.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/magomed/common/FileUtils.class" afterPath="$PROJECT_DIR$/target/classes/ru/magomed/common/FileUtils.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/magomed/common/FolderUtils.class" afterPath="$PROJECT_DIR$/target/classes/ru/magomed/common/FolderUtils.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/magomed/common/PathResolve.class" afterPath="$PROJECT_DIR$/target/classes/ru/magomed/common/PathResolve.class" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -35,8 +39,8 @@
       <file leaf-file-name="CommandParser.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/magomed/command/impl/CommandParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1532">
-              <caret line="18" column="26" lean-forward="false" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+            <state relative-caret-position="178">
+              <caret line="155" column="0" lean-forward="false" selection-start-line="155" selection-start-column="0" selection-end-line="155" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -54,12 +58,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.MD" pinned="false" current-in-tab="true">
+      <file leaf-file-name="README.MD" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.MD">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="342">
-                <caret line="19" column="106" lean-forward="false" selection-start-line="19" selection-start-column="106" selection-end-line="19" selection-end-column="106" />
+              <first_editor relative-caret-position="72">
+                <caret line="4" column="3" lean-forward="true" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="67" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -67,21 +71,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FolderUtils.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ru/magomed/common/FolderUtils.java">
+      <file leaf-file-name="CommandCat.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ru/magomed/command/impl/CommandCat.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="444">
-              <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+            <state relative-caret-position="178">
+              <caret line="58" column="87" lean-forward="false" selection-start-line="58" selection-start-column="87" selection-end-line="58" selection-end-column="87" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NotDirectoryException.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ru/magomed/exception/NotDirectoryException.java">
+      <file leaf-file-name="FolderUtils.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ru/magomed/common/FolderUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="2" column="23" lean-forward="false" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+            <state relative-caret-position="666">
+              <caret line="37" column="5" lean-forward="false" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -205,16 +209,16 @@
         <option value="$PROJECT_DIR$/src/main/java/ru/magomed/common/Options.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/magomed/command/impl/CommandTail.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/magomed/command/impl/CommandMkDir.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/magomed/command/impl/CommandCat.java" />
         <option value="$PROJECT_DIR$/a.txt" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/ru/magomed/command/impl/CommandConveyor.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/magomed/command/impl/CommandCD.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/magomed/exception/DirectoryAlreadyExistException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/magomed/common/FolderUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/magomed/command/impl/CommandParser.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/magomed/command/impl/CommandCP.java" />
         <option value="$PROJECT_DIR$/README.MD" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/magomed/common/FolderUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/magomed/command/impl/CommandCat.java" />
       </list>
     </option>
   </component>
@@ -294,6 +298,25 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="magomed" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JavaBash" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JavaBash" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="magomed" type="462c0819:PsiDirectoryNode" />
+              <item name="command" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JavaBash" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JavaBash" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="magomed" type="462c0819:PsiDirectoryNode" />
+              <item name="command" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="JavaBash" type="b2602c69:ProjectViewProjectNode" />
@@ -535,15 +558,16 @@
       <workItem from="1520610433744" duration="3963000" />
       <workItem from="1520614453663" duration="6213000" />
       <workItem from="1520668346763" duration="42799000" />
-      <workItem from="1520834785490" duration="19144000" />
+      <workItem from="1520834785490" duration="19406000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="99709000" />
+    <option name="totallyTimeSpent" value="99971000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -553,7 +577,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46600333" sideWeight="0.4795222" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32984293" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32984293" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32984293" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32984293" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -565,7 +589,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38638744" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38638744" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -591,49 +615,19 @@
           <option name="timeStamp" value="97" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/magomed/command/impl/CommandCat.java</url>
-          <line>41</line>
-          <properties />
-          <option name="timeStamp" value="98" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ru/magomed/common/FileUtils.java</url>
           <line>9</line>
           <properties />
           <option name="timeStamp" value="101" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/magomed/command/impl/CommandParser.java</url>
-          <line>173</line>
+          <url>file://$PROJECT_DIR$/src/main/java/ru/magomed/command/impl/CommandCat.java</url>
+          <line>58</line>
           <properties />
-          <option name="timeStamp" value="103" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/magomed/command/impl/CommandParser.java</url>
-          <line>155</line>
-          <properties />
-          <option name="timeStamp" value="104" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/magomed/command/impl/CommandParser.java</url>
-          <line>24</line>
-          <properties />
-          <option name="timeStamp" value="105" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/magomed/command/impl/CommandParser.java</url>
-          <line>166</line>
-          <properties />
-          <option name="timeStamp" value="106" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/magomed/command/impl/CommandParser.java</url>
-          <line>165</line>
-          <properties />
-          <option name="timeStamp" value="107" />
+          <option name="timeStamp" value="108" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="108" />
+      <option name="time" value="109" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -868,18 +862,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/magomed/command/impl/CommandCat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#2139#2140#0" expanded="false" />
-            <element signature="e#2167#2168#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/a.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
@@ -995,14 +977,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/magomed/common/FolderUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="444">
-          <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/magomed/exception/NotDirectoryException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
@@ -1061,24 +1035,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/magomed/command/impl/CommandParser.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/magomed/common/FolderUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1532">
-          <caret line="18" column="26" lean-forward="false" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="666">
+          <caret line="37" column="5" lean-forward="false" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.MD">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="342">
-            <caret line="19" column="106" lean-forward="false" selection-start-line="19" selection-start-column="106" selection-end-line="19" selection-end-column="106" />
+          <first_editor relative-caret-position="72">
+            <caret line="4" column="3" lean-forward="true" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="67" />
             <folding />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/magomed/command/impl/CommandParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="155" column="0" lean-forward="false" selection-start-line="155" selection-start-column="0" selection-end-line="155" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/magomed/command/impl/CommandCat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="58" column="87" lean-forward="false" selection-start-line="58" selection-start-column="87" selection-end-line="58" selection-end-column="87" />
+          <folding />
         </state>
       </provider>
     </entry>

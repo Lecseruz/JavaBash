@@ -56,7 +56,7 @@ public class CommandCat implements Command {
             }
             return true;
         } catch (NotFoundException e) {
-            System.out.println(NamesCommands.CAT + Messages.NOT_FOUND);
+            System.out.println(NamesCommands.CAT + Messages.NOT_FOUND + file.toString());
             return false;
         } catch (IOException e) {
             e.printStackTrace();

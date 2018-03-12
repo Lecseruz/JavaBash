@@ -2,21 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b28a7d3d-4e67-4b03-9d37-77900a0a0f80" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/README.MD" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/magomed/Main.class" afterPath="$PROJECT_DIR$/target/classes/ru/magomed/Main.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/magomed/command/impl/CommandCD.class" afterPath="$PROJECT_DIR$/target/classes/ru/magomed/command/impl/CommandCD.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/magomed/command/impl/CommandCP.class" afterPath="$PROJECT_DIR$/target/classes/ru/magomed/command/impl/CommandCP.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/magomed/command/impl/CommandCat.class" afterPath="$PROJECT_DIR$/target/classes/ru/magomed/command/impl/CommandCat.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/magomed/command/impl/CommandLS.class" afterPath="$PROJECT_DIR$/target/classes/ru/magomed/command/impl/CommandLS.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/magomed/command/impl/CommandMkDir.class" afterPath="$PROJECT_DIR$/target/classes/ru/magomed/command/impl/CommandMkDir.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/magomed/command/impl/CommandParser.class" afterPath="$PROJECT_DIR$/target/classes/ru/magomed/command/impl/CommandParser.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/magomed/command/impl/CommandTail.class" afterPath="$PROJECT_DIR$/target/classes/ru/magomed/command/impl/CommandTail.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/magomed/command/impl/CommandTouch.class" afterPath="$PROJECT_DIR$/target/classes/ru/magomed/command/impl/CommandTouch.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/magomed/common/CopyDirVisitor.class" afterPath="$PROJECT_DIR$/target/classes/ru/magomed/common/CopyDirVisitor.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/magomed/common/FileUtils.class" afterPath="$PROJECT_DIR$/target/classes/ru/magomed/common/FileUtils.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/magomed/common/PathResolve.class" afterPath="$PROJECT_DIR$/target/classes/ru/magomed/common/PathResolve.class" />
+      <change beforePath="$PROJECT_DIR$/README.MD" afterPath="$PROJECT_DIR$/README.MD" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -119,8 +106,8 @@
         <entry file="file://$PROJECT_DIR$/README.MD">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="72">
-                <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+              <first_editor relative-caret-position="36">
+                <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -499,12 +486,12 @@
       <workItem from="1520610433744" duration="3963000" />
       <workItem from="1520614453663" duration="6213000" />
       <workItem from="1520668346763" duration="42799000" />
-      <workItem from="1520834785490" duration="12536000" />
+      <workItem from="1520834785490" duration="12650000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="93101000" />
+    <option name="totallyTimeSpent" value="93215000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
@@ -517,7 +504,7 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.46600333" sideWeight="0.4795222" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46600333" sideWeight="0.4795222" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32984293" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32984293" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32984293" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1015,8 +1002,8 @@
     <entry file="file://$PROJECT_DIR$/README.MD">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="72">
-            <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <first_editor relative-caret-position="36">
+            <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
             <folding />
           </first_editor>
           <second_editor />

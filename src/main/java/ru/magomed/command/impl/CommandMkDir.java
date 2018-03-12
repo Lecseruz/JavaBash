@@ -3,10 +3,9 @@ package ru.magomed.command.impl;
 import ru.magomed.Directory;
 import ru.magomed.command.api.Command;
 import ru.magomed.common.NamesCommands;
-import ru.magomed.common.Options;
 import ru.magomed.common.Messages;
 import ru.magomed.common.PathResolve;
-import ru.magomed.exception.AlreadyExistException;
+import ru.magomed.exception.DirectoryAlreadyExistException;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -26,11 +25,11 @@ public class CommandMkDir implements Command {
     public boolean execute() {
         try {
             if (Files.exists(path)) {
-                throw new AlreadyExistException();
+                throw new DirectoryAlreadyExistException();
             }
             Files.createDirectories(path);
             return true;
-        } catch (AlreadyExistException e) {
+        } catch (DirectoryAlreadyExistException e) {
             System.out.println(NamesCommands.MKDIR + Messages.EXIST + path.getFileName());
             return false;
         } catch (IOException e) {

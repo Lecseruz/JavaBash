@@ -4,6 +4,7 @@ import ru.magomed.command.api.Command;
 import ru.magomed.common.*;
 import ru.magomed.exception.NotFoundException;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -23,9 +24,18 @@ public class CommandCP implements Command {
      */
     private Path to;
 
+
+    private boolean recursiveCopy = false;
+
     public CommandCP(String srcPath, String targetPath) {
         this.from = Paths.get(srcPath);
         this.to = Paths.get(targetPath);
+    }
+
+    public CommandCP(String srcPath, String targetPath, boolean recursiveCopy) {
+        this.from = Paths.get(srcPath);
+        this.to = Paths.get(targetPath);
+        this.recursiveCopy = recursiveCopy;
     }
 
     @Override
@@ -35,9 +45,9 @@ public class CommandCP implements Command {
                 throw new NotFoundException();
             }
             Files.copy(from, to, Options.OPTIONS);
-//            if (Files.isDirectory(from)) {
-//                FolderUtils.copyFolder(new File(from.toString()), new File(to.toString()));
-//            }
+            if (Files.isDirectory(from) && recursiveCopy) {
+                FolderUtils.copyFolder(new File(from.toString()), new File(to.toString()));
+            }
             Files.walkFileTree(from, new CopyDirVisitor(from, to, Options.OPTIONS));
             return true;
         } catch (NotFoundException e) {

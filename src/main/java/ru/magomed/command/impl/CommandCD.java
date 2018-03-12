@@ -3,8 +3,7 @@ package ru.magomed.command.impl;
 import ru.magomed.Directory;
 import ru.magomed.command.api.Command;
 import ru.magomed.common.NamesCommands;
-import ru.magomed.common.Options;
-import ru.magomed.exception.DoNotDirectoryException;
+import ru.magomed.exception.NotDirectoryException;
 import ru.magomed.common.Messages;
 import ru.magomed.common.PathResolve;
 import ru.magomed.exception.NotFoundException;
@@ -26,7 +25,7 @@ public class CommandCD implements Command {
         Path currPath = PathResolve.cdPath(Directory.getInstance().getPath(), directory);
         try {
             if (!Files.isDirectory(currPath)) {
-                throw new DoNotDirectoryException();
+                throw new NotDirectoryException();
             }
             if (Files.notExists(currPath)) {
                 throw new NotFoundException();
@@ -37,7 +36,7 @@ public class CommandCD implements Command {
             System.out.println(NamesCommands.CD + Messages.NOT_FOUND);
             return false;
         }
-        catch (DoNotDirectoryException e){
+        catch (NotDirectoryException e){
             System.out.println(NamesCommands.CD + Messages.NOT_A_DIRECTORY + currPath.getFileName());
             return false;
         }

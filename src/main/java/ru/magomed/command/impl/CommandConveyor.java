@@ -13,13 +13,12 @@ public class CommandConveyor implements Command {
     public boolean execute() {
         boolean success = true;
         while (!queue.isEmpty()) {
-            if (!queue.peek().execute()) {
+            Command command = queue.poll();
+            boolean result = command.execute();
+
+            if (!result && command.isRequiredSuccess()) {
                 success = false;
-                if (queue.poll().isRequiredSuccess()) {
-                    break;
-                }
-            } else {
-                queue.poll();
+                break;
             }
         }
         return success;
@@ -37,10 +36,5 @@ public class CommandConveyor implements Command {
 
     public void add(Command command) {
         queue.add(command);
-    }
-
-    public enum Delimiter {
-        AMP,
-        DSLASH
     }
 }

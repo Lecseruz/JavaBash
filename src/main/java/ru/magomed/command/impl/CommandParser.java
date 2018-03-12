@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicReference;
 
 public class CommandParser {
 
@@ -23,8 +24,8 @@ public class CommandParser {
         while (iterator.hasNext()) {
             String nameCommand = iterator.next();
             Command command = null;
-            StringBuilder state = new StringBuilder();
-            List<String> list = readArgs(iterator, state);
+            AtomicReference<String> atomicReference = new AtomicReference<>("");
+            List<String> list = readArgs(iterator, atomicReference);
 
             switch (nameCommand) {
                 case NamesCommands.HELP: {
@@ -138,7 +139,9 @@ public class CommandParser {
                 case NamesCommands.CP: {
                     if (list.size() == 2) {
                         command = new CommandCP(list.get(0), list.get(1));
-                    } else {
+                    } else if (list.size() == 3 && list.get(0).equals("-f")) {
+                        command = new CommandCP(list.get(1), list.get(2), true);
+                    }else {
                         command = new EmptyCommand();
                         System.out.println(NamesCommands.CP + Messages.ERROR);
                     }
@@ -150,7 +153,7 @@ public class CommandParser {
                     break;
                 }
             }
-            if (state.toString().equals("&&")) {
+            if (atomicReference.get().equals("&&")) {
                 command.setRequiredSuccess(true);
             }
             commandConveyor.add(command);
@@ -158,7 +161,7 @@ public class CommandParser {
         return commandConveyor;
     }
 
-    private static List<String> readArgs(Iterator<String> iterator, StringBuilder state) {
+    private static List<String> readArgs(Iterator<String> iterator, AtomicReference<String> atomicReference) {
         List<String> list = new ArrayList<>();
         if (iterator.hasNext()) {
             String next = iterator.next();
@@ -168,7 +171,7 @@ public class CommandParser {
                 next = iterator.next();
             }
             if (iterator.hasNext()) {
-                state.append(next);
+                atomicReference.set(next);
             } else {
                 list.add(next);
             }

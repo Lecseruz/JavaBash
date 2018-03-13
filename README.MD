@@ -1,7 +1,7 @@
 # Cкачать проект
 ## git clone https://github.com/magomedgadjiev/JavaBash.git
 
-#Зайти в директорию проекта
+# Зайти в директорию проекта
 ## cd JavaBash
 
 # Собрать проект  
